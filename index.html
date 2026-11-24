@@ -46,7 +46,7 @@ button.mini { padding:4px 10px; font-size:13px; }
     <button class="tab on" data-k="M" type="button">Mercadorias (FSMA)</button>
     <button class="tab" data-k="V" type="button">Veículos (FSVA)</button>
   </div>
-  <div class="tools"><button class="mini" onclick="exemplo()" type="button">Carregar exemplo (SMOB)</button><button class="mini" onclick="limpar()" type="button">Limpar pedido</button></div>
+  <div class="tools"><button class="mini" id="bExemplo" onclick="exemplo()" type="button">Carregar exemplo (SMOB)</button><button class="mini" onclick="limpar()" type="button">Limpar pedido</button></div>
 
   <section><h2>1. Órgão solicitante</h2><div class="grid">
     <div class="full"><label>Nome e razão social do órgão público</label><input id="org_nome"></div>
@@ -722,6 +722,7 @@ function setKind(k) {
   const m = k === 'M';
   $('tituloItens').textContent = m ? '2. Mercadorias solicitadas' : '2. Veículos solicitados';
   $('rotuloFormulario').textContent = m ? 'FSMA (Mercadorias)' : 'FSVA (Veículos)';
+  $('bExemplo').hidden = !m; // o exemplo é de mercadorias
 }
 function coletar() {
   const g = (grp, keys, pre) => { const o = {}; keys.forEach(k => o[k] = $(pre + k).value); return o; };
