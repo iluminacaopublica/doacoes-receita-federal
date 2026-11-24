@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.2 – 24/11/2026
+- O botão do exemplo passou a se chamar "Carregar exemplo de mercadorias" (continua escondido na aba Veículos).
+
 ## 1.1 – 24/11/2026
 - O botão "Carregar exemplo" aparece só na aba Mercadorias (o exemplo é um pedido de mercadorias); some na aba Veículos.
 
